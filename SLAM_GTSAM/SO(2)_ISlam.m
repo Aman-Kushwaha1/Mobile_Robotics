@@ -16,8 +16,6 @@ for j=1:size(data{1})
        end
 end
 
-%%%%%Q1 c
-
 isam = gtsam.ISAM2();
 
 for r = 1:size(pose)

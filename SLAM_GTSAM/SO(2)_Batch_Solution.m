@@ -5,8 +5,6 @@ fileID = fopen(path,'r');
 
 data = textscan(fileID,'%s%f%f%f%f%f%f%f%f%f%f%f');
 
-%%%%%%%%%Q1 a
-
 pose = []; edge = [];
 for j=1:size(data{1})
        if data{1}(j)=="VERTEX_SE2"
@@ -17,9 +15,6 @@ for j=1:size(data{1})
        end
 end
 
-
-%%%%%%%Q1 b
-
 %creating 2d non-linear factorgraph
 graph = NonlinearFactorGraph;   
 
@@ -29,8 +24,6 @@ graph.add(PriorFactorPose2(symbol('x', 1), Pose2(0, 0, 0), priorModel));
 
 odomModel = noiseModel.Diagonal.Sigmas([0.5, 0.5, 0.1]');
 
-%size()
-m = [-100 100]
 %add edges
 for r = 1: size(edge)
     cov = [edge(r,6) edge(r,7) edge(r,8); edge(r,7) edge(r,9) edge(r,10); edge(r,8) edge(r,10) edge(r,11)];
