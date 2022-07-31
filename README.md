@@ -1,2 +1,2 @@
 # Mobile_Robotics
-SLAM, Localization, Motion Planning, Sensor Fusion, Kalamn Filter, EKF, UKF
+SLAM, Localization, Motion Planning Algorithms, Sensor Fusion, Kalamn Filter, EKF, UKF
